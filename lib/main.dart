@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'screens/dashboard.dart';
 import 'screens/assignments.dart';
 import 'screens/schedule.dart';
+import 'auth/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
           secondary: Color(0xFFFFC107),
         ),
       ),
-      home: const MainNav(),
+      home: const LoginScreen(),
     );
   }
 }
@@ -54,9 +55,18 @@ class _MainNavState extends State<MainNav> {
         selectedItemColor: const Color(0xFFFFC107),
         unselectedItemColor: Colors.white70,
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.dashboard), label: 'Dashboard'),
-          BottomNavigationBarItem(icon: Icon(Icons.assignment), label: 'Assignments'),
-          BottomNavigationBarItem(icon: Icon(Icons.schedule), label: 'Schedule'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.dashboard),
+            label: 'Dashboard',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.assignment),
+            label: 'Assignments',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.schedule),
+            label: 'Schedule',
+          ),
         ],
       ),
     );
